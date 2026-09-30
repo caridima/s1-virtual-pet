@@ -38,4 +38,53 @@ public class VirtualPet {
     public void wonTheLottery(){
         face.setImage("astonished");
     }
-} // end Virtual Pet
+    public void chocolate(){
+        hunger = hunger + 50;
+
+        face.setMessage("I LOVE CHOCOLATE!!!!");
+        face.setImage("sick");
+        face.setMessage("Mr Stark, I don't feel so good...");
+        face.setImage("custom_almost_dead");
+        }
+    public void apple(){
+        if (hunger > 5) {
+            hunger = hunger - 5;
+        } else {
+            hunger = 0;
+        }
+        if (hunger <= 5){
+            face.setImage("custom_apple");
+            face.setMessage("Yum Yum Yum!!!");
+        }
+        else {
+            face.setImage("happy");
+            face.setMessage("Kinda hungry still...");
+        }
+    }
+        public void brocoli(){
+        hunger = hunger - 1;
+            if (hunger<=3){
+                face.setImage("enraged");
+                face.setMessage("I'm NOT EATING THAT");
+            }else{
+                face.setImage("annoyed");
+                face.setMessage("BRUH, YOU ARE LUCKY IM EATING THIS...");
+        }
+    }
+        public void hungry(){
+            face.setImage("hungry");
+            face.setMessage("Clock is ticking and my stomach is getting empty...");
+        }
+        public void medicine(){
+            face.setImage("love");
+            face.setMessage("You saved me to live for another day!!");
+        }
+        public void dead(){
+            face.setImage("skeleton");
+            face.setMessage("nice one...");
+        }
+
+ }
+    
+
+// end Virtual Pet
