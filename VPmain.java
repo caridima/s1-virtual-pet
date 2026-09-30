@@ -27,8 +27,8 @@ public class VPMain {
             vp.hunger +=1;
             vp.hungry();
             this.waitABeat(1000);
-        String normal = this.askForInput("Are you sure you don't want normal food?");
-        if (normal.equals("no")){
+        String normal = this.askForInput("Do want normal food?");
+        if (normal.equals("yes")){
             vp.feed();
             this.waitABeat(1000);
             vp.feed();
@@ -40,7 +40,7 @@ public class VPMain {
         }
         String apple = this.askForInput("Do you want an apple");
             if(apple.equals("yes")){
-                this.waitABeat(100);
+                this.waitABeat(1000);
                 vp.apple();
             }else{
                 vp.hungry();
@@ -54,10 +54,22 @@ public class VPMain {
                 this.waitABeat(1000);
                 vp.brocoli();
             }
-        String
+        if(ans.equals("yes")){
+            String choco1 = this.askForInput("Do you want chocolate?");
+            if(choco1.equals("yes")){
+                vp.chocolate();
+                this.waitABeat(1000);
+            String med = this.askForInput("Do you want to give me medicine?");
+            if(med.equals("yes")){
+            this.waitABeat(1000);
+            vp.medicine();
+        }
+        else{
+            vp.dead();
+        }
         
 
-    }}
+    }}}}
     
 }
 
