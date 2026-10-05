@@ -4,7 +4,13 @@
  * @author ?
  */
 public class VirtualPet {
-    
+    public void waitABeat(int ms){
+        try {
+            Thread.sleep(ms); //milliseconds
+        } catch(Exception e){
+        
+        }
+    }
     VirtualPetFace face;
     int hunger = 0;   // how hungry the pet is.
     
@@ -43,6 +49,7 @@ public class VirtualPet {
 
         face.setMessage("I LOVE CHOCOLATE!!!!");
         face.setImage("sick");
+        waitABeat(1000);
         face.setMessage("Mr Stark, I don't feel so good...");
         face.setImage("custom_almost_dead");
         }
@@ -74,6 +81,10 @@ public class VirtualPet {
         public void hungry(){
             face.setImage("hungry");
             face.setMessage("Clock is ticking and my stomach is getting empty...");
+        }
+        public void starving(){
+            face.setImage("custom_alert");
+            face.setMessage("I'M STARVING!!");
         }
         public void medicine(){
             face.setImage("love");
