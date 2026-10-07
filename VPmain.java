@@ -17,6 +17,8 @@ public class VPMain {
         if(med.equals("yes")){
             this.waitABeat(1000);
             vp.medicine();
+            this.waitABeat(1000);
+            System.exit(1);
         }
         else{
             vp.dead();
@@ -86,6 +88,8 @@ public class VPMain {
             if(med.equals("yes")){
             this.waitABeat(1000);
             vp.medicine();
+            this.waitABeat(1000);
+            System.exit(1);
         }
         else{
             String assurance = this.askForInput("SAY YOU SWEAR!! DO YOU WANT MEDICINE???");
